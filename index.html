@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Quiz</title>
+    <!-- link to css file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>Beginner Coding Quiz</header>
+
+
+    <!--The box that gives u info about the game and lets u start the game-->
+    <div class="box" id="start-box">
+            <div class="box-title">
+                <span>Welcome to this Coding Quiz!</span>
+            </div>
+            <div class="box-content">
+                <ul class = "quiz-info" id="rules">
+                    <li> There are 10 Questions in this quiz </li>
+                    <li> You will be timed for a total of 100 secs or 1:40 mins </li>
+                    <li> If you answer a question wrong your time well be subtracted by 10 secs </li>
+                    <li> The game is over when all questions are answered or the timer reaches 0</li>
+                    <li> When the game is over, save your initials and score </li>
+                    <li> Good Luck! </li>
+                </ul>
+             </div>
+    <!-- This is the start button-->
+        <div class="buttons">
+            <button id="start-button">Start Quiz</button> 
+        </div>
+    </div>
+
+    <!-- This is the timer-->
+    <section class="timer">
+         Time Left:
+            <div class="time">100</div>
+    </section>
+
+    <div class="box" id="one">
+        <div class="box-title">
+            <span> Commonly used data types does NOT INCLUDE?</span>
+        </div>
+        <div class="box-content" id="question-1">
+            <ul class="answers" style="list-style: none;">
+                <li class="option">
+                    <button class="choice">String</button>
+                    <div id="icon"> <i class="fas fa-check"> ❌ </i></div>
+                </li>
+                <li class="option">
+                    <button class="choice">Boolean</button>
+                    <div id="icon"> <i class="fas fa-check"> ❌ </i></div>
+                    
+                </li>
+                <li class="option" id="correct">
+                    <button class="choice" id="correct">Alerts</button>
+                    <div id="icon"> <i class="fas fa-check"> ✓ </i></div>
+                </li>
+                <li class="option">
+                    <button class="choice">Number</button>
+                    <div id="icon"> <i class="fas fa-check"> ❌</i></div>
+                </li>
+            </ul>
+
+        
+        </div>    
+    </div>
+
+    <div class="box" id="two">
+        <div class="box-title">
+            <span> The conditions in an if / else statement is enclosed within?</span>
+        </div>
+        <div class="box-content" id="question-2">
+            <ul class="answers" style="list-style: none;">
+                <li class="option">
+                    <button class="choice">Quotes</button>
+        
+                </li>
+                <li class="option">
+                    <button class="choice" id="correct">Curly Brackets</button>
+                
+                    
+                </li>
+                <li class="option">
+                    <button class="choice" >Paranthesis</button>
+                    
+                </li>
+                <li class="option">
+                    <button class="choice">Square Brackets</button>
+                    
+                </li>
+            </ul>
+
+        
+        </div>    
+    </div>
+
+    
+
+
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>

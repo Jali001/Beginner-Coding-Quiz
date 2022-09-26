@@ -1,0 +1,136 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    flex: auto;
+
+}
+
+header
+{
+    display: flex;
+    width: 100%;
+    height: 40px;
+    font-size: 30px;
+    justify-content: center;
+
+}
+
+body
+{
+    background: beige;
+}
+
+.box
+{
+    position: absolute;
+    background: white;
+    width: 600px;
+    border-radius: 5px;
+    background:white;
+    top: 30%;
+    left: 30%;
+
+    
+
+}
+
+.box .box-title
+{
+height: 60px;
+width: 100%;
+
+border-bottom: 2px solid gray;
+font: 200;
+display: flex;
+align-items: center;
+padding: 0 35px;
+font-size: 20px;
+
+}
+
+.box .box-content, .box .option-list
+{
+   
+    border-bottom: 2px solid gray;
+    background:aqua;
+    display: flex;
+
+}
+#icon
+{
+    display: none;
+}
+#start-box
+{
+
+}
+#one
+{
+    display: none;
+}
+
+ul
+{
+    
+    padding: 10px 50px;
+    width: 60;
+    
+}
+ul li
+{
+    padding: 5px
+}
+
+.box .buttons
+{
+    margin: 5px;
+    height: 60px;
+    display: flex;
+    border: darkred;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 35px;
+
+}
+button 
+{
+    background: darkred;
+    border-style:groove;
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    transition-duration: 0.4s;
+
+}
+
+
+button:hover
+{
+background:darkolivegreen;
+color: white;
+
+}
+
+.timer
+{
+    background: darkred;
+    width: fit-content;
+    padding: 10px;
+    color: white;
+    font-weight: 500;
+    font-style: oblique;
+
+}
+li
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
