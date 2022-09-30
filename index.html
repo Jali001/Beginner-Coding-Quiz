@@ -36,7 +36,7 @@
     <!-- This is the timer-->
     <section class="timer">
          Time Left:
-            <div class="time">100</div>
+            <div class="time" id="time-test">100</div>
     </section>
 
     <div class="box" id="one">
@@ -45,12 +45,12 @@
         </div>
         <div class="box-content" id="question-1">
             <ul class="answers" style="list-style: none;">
-                <li class="option">
-                    <button class="choice">String</button>
+                <li class="option" id="wrong">
+                    <button class="choice" id="wrong">String</button>
                     <div id="icon"> <i class="fas fa-check"> ❌ </i></div>
                 </li>
-                <li class="option">
-                    <button class="choice">Boolean</button>
+                <li class="option" id="wrong">
+                    <button class="choice" id="wrong">Boolean</button>
                     <div id="icon"> <i class="fas fa-check"> ❌ </i></div>
                     
                 </li>
@@ -58,8 +58,8 @@
                     <button class="choice" id="correct">Alerts</button>
                     <div id="icon"> <i class="fas fa-check"> ✓ </i></div>
                 </li>
-                <li class="option">
-                    <button class="choice">Number</button>
+                <li class="option" id="wrong">
+                    <button class="choice" id="wrong">Number</button>
                     <div id="icon"> <i class="fas fa-check"> ❌</i></div>
                 </li>
             </ul>
@@ -79,12 +79,12 @@
         
                 </li>
                 <li class="option">
-                    <button class="choice" id="correct">Curly Brackets</button>
+                    <button class="choice" >Curly Brackets</button>
                 
                     
                 </li>
                 <li class="option">
-                    <button class="choice" >Paranthesis</button>
+                    <button class="choice" id="correct">Paranthesis</button>
                     
                 </li>
                 <li class="option">
@@ -97,7 +97,236 @@
         </div>    
     </div>
 
+    <div class="box" id="three">
+        <div class="box-title">
+            <span> Arrays in JavaScript can be used to store? </span>
+        </div>
+        <div class="box-content" id="question-3">
+            <ul class="answers" style="list-style: none;">
+                <li class="option">
+                    <button class="choice">Numbers and Strings</button>
+        
+                </li>
+                <li class="option">
+                    <button class="choice" >Other Arrays</button>
+                
+                    
+                </li>
+                <li class="option">
+                    <button class="choice" >Booleans</button>
+                    
+                </li>
+                <li class="option">
+                    <button class="choice" id="correct">All of the Above</button>
+                    
+                </li>
+            </ul>
+
+        
+        </div>    
+    </div>
     
+    <div class="box" id="four">
+        <div class="box-title">
+            <span> String values must be enclosed within...? </span>
+        </div>
+        <div class="box-content" id="question-4">
+            <ul class="answers" style="list-style: none;">
+                <li class="option">
+                    <button class="choice" >Commas</button>
+        
+                </li>
+                <li class="option">
+                    <button class="choice" >Curly Brackets</button>
+                
+                    
+                </li>
+                <li class="option">
+                    <button class="choice" id="correct" >Quotes</button>
+                    
+                </li>
+                <li class="option">
+                    <button class="choice">parenthesis</button>
+                    
+                </li>
+            </ul>
+
+        
+        </div>    
+    </div>
+
+    <div class="box" id="five">
+        <div class="box-title">
+            <span> A very useful tool for debugging would be? </span>
+        </div>
+        <div class="box-content" id="question-5">
+            <ul class="answers" style="list-style: none;">
+                <li class="option">
+                    <button class="choice" >Javascript</button>
+        
+                </li>
+                <li class="option">
+                    <button class="choice" >Terminal/Bash</button>
+                
+                    
+                </li>
+                <li class="option">
+                    <button class="choice"  >for loops</button>
+                    
+                </li>
+                <li class="option">
+                    <button class="choice" id="correct">console.log</button>
+                    
+                </li>
+            </ul>
+
+        
+        </div>    
+    </div>
+
+    <div class="box" id="six">
+        <div class="box-title">
+            <span> How can create a variable in Javascript?</span>
+        </div>
+        <div class="box-content" id="question-6">
+            <ul class="answers" style="list-style: none;">
+                <li class="option">
+                    <button class="choice" id="correct" >var</button>
+        
+                </li>
+                <li class="option">
+                    <button class="choice" >int</button>
+                
+                    
+                </li>
+                <li class="option">
+                    <button class="choice"  > char</button>
+                    
+                </li>
+                <li class="option">
+                    <button class="choice" >if</button>
+                    
+                </li>
+            </ul>
+
+        
+        </div>    
+    </div>
+
+    <div class="box" id="seven">
+        <div class="box-title">
+            <span> HTML stands for?</span>
+        </div>
+        <div class="box-content" id="question-7">
+            <ul class="answers" style="list-style: none;">
+                <li class="option">
+                    <button class="choice"  >I don't know</button>
+        
+                </li>
+                <li class="option">
+                    <button class="choice" >HyperIndex Markup Language</button>
+                
+                    
+                </li>
+                <li class="option">
+                    <button class="choice"  id="correct"> Hypertext Markup Language</button>
+                    
+                </li>
+                <li class="option">
+                    <button class="choice" >High-Level Markup Language</button>
+                    
+                </li>
+            </ul>
+
+        
+        </div>    
+    </div>
+
+    <div class="box" id="eight">
+        <div class="box-title">
+            <span> HTML is good to build?</span>
+        </div>
+        <div class="box-content" id="question-8">
+            <ul class="answers" style="list-style: none;">
+                <li class="option">
+                    <button class="choice" >Design</button>
+        
+                </li>
+                <li class="option">
+                    <button class="choice" id="correct" >Structure</button>
+                
+                    
+                </li>
+                <li class="option">
+                    <button class="choice"  > Logic</button>
+                    
+                </li>
+                <li class="option">
+                    <button class="choice" >Databases</button>
+                    
+                </li>
+            </ul>
+
+        
+        </div>    
+    </div>
+
+    <div class="box" id="nine">
+        <div class="box-title">
+            <span> CSS is good to build?</span>
+        </div>
+        <div class="box-content" id="question-9">
+            <ul class="answers" style="list-style: none;">
+                <li class="option">
+                    <button class="choice"  id="correct" > Design</button>
+        
+                </li>
+                <li class="option">
+                    <button class="choice" >Structure</button>
+                
+                    
+                </li>
+                <li class="option">
+                    <button class="choice" > Logic</button>
+                    
+                </li>
+                <li class="option">
+                    <button class="choice" >Databases</button>
+                    
+                </li>
+            </ul>
+
+        
+        </div>    
+    </div>
+
+    <div class="box" id="ten">
+        <div class="box-title">
+            <span> Javascript is good to build?</span>
+        </div>
+        <div class="box-content" id="question-10">
+            <ul class="answers" style="list-style: none;">
+                <li class="option">
+                    <button class="choice" > Design</button>
+        
+                </li>
+                <li class="option">
+                    <button class="choice" >Structure</button>
+                
+                    
+                </li>
+                <li class="option">
+                    <button class="choice" id="correct" > Logic</button>
+                    
+                </li>
+                <li class="option">
+                    <button class="choice" >Databases</button>
+                    
+                </li>
+            </ul>
+
+        
+        </div>    
 
 
     
