@@ -1,6 +1,8 @@
 ## Beginner-Coding-Quiz
 # Website Link: 
 
+![Alt text](website pic.png)
+
 Quiz designed to test the knowledge of a beginner-level coder 
 
 ## Your Task
