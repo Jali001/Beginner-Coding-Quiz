@@ -10,6 +10,7 @@ const q7 = document.getElementById('seven');
 const q8 = document.getElementById('eight');
 const q9 = document.getElementById('nine');
 const q10 = document.getElementById('ten');
+const qq = document.getElementById('enter-score');
 
 const q1Container = document.getElementById("question-1");
 const q2Container = document.getElementById("question-2");
@@ -22,16 +23,20 @@ const q8Container = document.getElementById("question-8");
 const q9Container = document.getElementById("question-9");
 const q10Container = document.getElementById("question-10");
 
+const endBtn = document.getElementById('submit-score');
+
 
 var theTimer = document.querySelector(".time");
 //console.log(timeElem);
 //console.log(timeElem.textContent);
 
-
+var questionCheck = 0;
 var score = 0;
 var timer;
 var tPenalty = -10;
-timerCount = 10;
+timerCount = 100;
+var done = false;
+const allScores =[];
 
 function time()
 {
@@ -49,13 +54,55 @@ function time()
     if(timerCount <= 0) {
       clearInterval(timerInverval)
       console.log("timer stopped");
+      qq.style.display ="block";
+      done = true;
+      
       // maybe we want to run other code / function
     }
+    if (questionCheck === 10)
+    {
+      clearInterval(timerInverval)
+      console.log("timer stopped");
+      qq.style.display ="block";
+       
+      done = true;
+      
+
+    }
+    if (done === true)
+    {
+      
+      recordScore();
+    }
+
 
   }, 1000);
 
 }
+//this function attempts to record the time for the player, not finished
+function recordScore()
+{
+  var theScore = document.getElementById("score");
+  theScore.innerHTML += score-1 + " secs";
 
+  endBtn.addEventListener('click', () => {
+   var name = document.getElementById("text").value;
+   var current = new Date(); 
+
+   currentDate = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();;
+   
+   playerRec = name +" " + currentDate + "Score: " + score;
+
+   console.log(playerRec);
+
+   allScores.push(playerRec)
+
+   JSON.stringify(allScores)
+  
+   localStorage.setItem("record", JSON.stringify(allScores))
+  
+  });
+}
 
 btn.addEventListener('click', () => {
   // 👇️ hide button
@@ -66,44 +113,8 @@ btn.addEventListener('click', () => {
   startGame();
 
 });
-/*
-console.log(question.length);
-var score = 0;
-console.log(score);
-for (var i =0; i < question.length; i++)
-{
-  console.log(score);
-  var qC = document.getElementById(container[i]);
-  console.log(container[i]);
-  var q = document.getElementById(question[i]);
-  var qNext = document.getElementById(question[i +1]);
- 
-  console.log(q);
-  console.log(qNext);
-  
-  qC.addEventListener("click", function(event)
-  {
-    var element =event.target;
-    console.log(element);
-    var state = element.getAttribute("id");
-    console.log(state);
 
-    if(state === "correct")
-    {
-      score = score + 1;
-      console.log(score);
-      
-    }
-  
-  })
-
-}
-
-console.log(score);
-
-*/
-
-
+//this function starts the game once the Start Quiz button is clicked
 function startGame(){
 q1Container.addEventListener("click",function(event)
 {
@@ -115,12 +126,13 @@ q1Container.addEventListener("click",function(event)
 
   console.log(state);
 
-  if(state === "correct")
+  if(state !== "correct")
   {
     
-    score = score + 1;
-     console.log("Score is +" +score);
+    timerCount = timerCount -10;
+    
   }
+  questionCheck = questionCheck +1; 
   q1.style.display = 'none';
   q2.style.display = 'block';
   
@@ -136,12 +148,13 @@ q2Container.addEventListener("click",function(event)
 
   console.log(state);
 
-  if(state === "correct")
+  if(state !== "correct")
   {
    
-    score = score + 1;
-    console.log("Score is +" +score);
+    timerCount = timerCount -10;
+   
   }
+  questionCheck = questionCheck +1; 
   q2.style.display = 'none';
   q3.style.display = 'block';
   
@@ -157,12 +170,13 @@ q3Container.addEventListener("click",function(event)
 
   console.log(state);
 
-  if(state === "correct")
+  if(state !== "correct")
   {
    
-    score = score + 1;
-    console.log("Score is +" +score);
+    timerCount = timerCount -10;
+   
   }
+  questionCheck = questionCheck +1; 
   q3.style.display = 'none';
   q4.style.display = 'block';
   
@@ -178,12 +192,13 @@ q4Container.addEventListener("click",function(event)
 
   console.log(state);
 
-  if(state === "correct")
+  if(state !== "correct")
   {
    
-    score = score + 1;
-    console.log("Score is +" +score);
+    timerCount = timerCount -10;
+   
   }
+  questionCheck = questionCheck +1; 
   q4.style.display = 'none';
   q5.style.display = 'block';
   
@@ -199,12 +214,14 @@ q5Container.addEventListener("click",function(event)
 
   console.log(state);
 
-  if(state === "correct")
+  
+  if(state !== "correct")
   {
    
-    score = score + 1;
-    console.log("Score is +" +score);
+    timerCount = timerCount -10;
+   
   }
+  questionCheck = questionCheck +1; 
   q5.style.display = 'none';
   q6.style.display = 'block';
   
@@ -220,12 +237,13 @@ q6Container.addEventListener("click",function(event)
 
   console.log(state);
 
-  if(state === "correct")
+  if(state !== "correct")
   {
    
-    score = score + 1;
-    console.log("Score is +" +score);
+    timerCount = timerCount -10;
+   
   }
+  questionCheck = questionCheck +1; 
   q6.style.display = 'none';
   q7.style.display = 'block';
   
@@ -241,12 +259,13 @@ q7Container.addEventListener("click",function(event)
 
   console.log(state);
 
-  if(state === "correct")
+  if(state !== "correct")
   {
    
-    score = score + 1;
-    console.log("Score is +" +score);
+    timerCount = timerCount -10;
+   
   }
+  questionCheck = questionCheck +1; 
   q7.style.display = 'none';
   q8.style.display = 'block';
   
@@ -262,12 +281,13 @@ q8Container.addEventListener("click",function(event)
 
   console.log(state);
 
-  if(state === "correct")
+  if(state !== "correct")
   {
    
-    score = score + 1;
-    console.log("Score is +" +score);
+    timerCount = timerCount -10;
+   
   }
+  questionCheck = questionCheck +1; 
   q8.style.display = 'none';
   q9.style.display = 'block';
   
@@ -283,12 +303,13 @@ q9Container.addEventListener("click",function(event)
 
   console.log(state);
 
-  if(state === "correct")
+  if(state !== "correct")
   {
    
-    score = score + 1;
-    console.log("Score is +" +score);
+    timerCount = timerCount -10;
+   
   }
+  questionCheck = questionCheck +1; 
   q9.style.display = 'none';
   q10.style.display = 'block';
   
@@ -304,21 +325,25 @@ q10Container.addEventListener("click",function(event)
 
   console.log(state);
 
-  if(state === "correct")
+  if(state !== "correct")
   {
    
-    score = score + 1;
-    console.log("Score is +" +score);
+    timerCount = timerCount -10;
+   
   }
+  questionCheck = questionCheck +1; 
   q10.style.display = 'none';
 
+  score = timerCount;
+  console.log("this is the score:");
+  console.log(score);
   
 })
+
+
 }
 
-var tempScore = {
-  score: 75
-}
+
 
 var temp = [{ score: 75} ,{ score: 93}, 12];
 
