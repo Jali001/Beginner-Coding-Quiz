@@ -1,5 +1,5 @@
 ## Beginner-Coding-Quiz
-# Website Link: 
+# Website Link: https://jali001.github.io/Beginner-Coding-Quiz/
 
 ![Alt text](website pic.png)
 
